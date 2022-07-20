@@ -1,0 +1,167 @@
+.main-screen{
+    width: 100vw;
+    min-height: 93vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .content{
+        background: $white;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        
+        &::before{
+            top: 0;
+            left: 0;
+            border-top: 10px solid $yellow;
+            border-left: 10px solid $yellow;
+            width: 20vh;
+            height: 20vh;
+            position: absolute;
+            z-index: 1;
+            content: "";
+        }
+        &::after{
+            bottom: 0vh;
+            right: 0vh;
+            border-bottom: 10px solid $white;
+            border-right: 10px solid $white;
+           
+            content: "";
+            position: absolute;
+            width: 20vh;
+            height: 20vh;
+        }
+        &__bar{
+            height: 70vh;
+            width: 40vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &_right{
+                background: $yellow;
+            }
+            .swiper {
+                width: 74%;
+                height: 84%;
+                //border: 1px solid black;
+
+                &__slide {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 18px;
+                    font-size: 22px;
+                    font-weight: bold;
+                    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+                
+                    color: black;
+                    
+                    img{
+                        object-fit: cover;
+                    }
+                    .card{
+                        width: 100%;
+                        height: 100%;
+                        background: $beige;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        
+                        
+                        &__title{
+                            width: 100%;
+                            height: 10%;
+                            background: $red;
+                            color: $beige;
+                            text-transform: uppercase;
+                            font-size: 0.7em;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                        &__img{
+                            margin: 1vh 0;
+                            width: 100%;
+                            height: 50%;
+                            background: url(../img/cards/1.png) center/cover;
+                            background-size: 120%;
+                            
+                            
+                            
+                            
+
+                        }
+                        &__description{
+                            margin: 0 1vw;
+                            color: $black;
+                            font-size: 0.9em;
+                            text-align: center;
+                            margin-top: 3vh;
+                            height: 30%;
+                            width: 100%;
+                            
+                        }
+                        &__state{
+                            align-self: flex-start;
+                            padding: 0.5vh 1vw;
+                            display: flex;
+                            justify-content: space-between;
+                            width: 100%;
+                            font-size: 0.9em;
+                            text-transform: lowercase;
+                        }
+                    }
+                }
+                &__slide:nth-child(1n) {
+                    //background: url(../img/cards/1.jpg);
+                }
+    
+                &__slide:nth-child(2n) {
+                    background-color: rgb(0, 140, 255);
+                }
+    
+                &__slide:nth-child(3n) {
+                    background-color: rgb(10, 184, 111);
+                }
+    
+                &__slide:nth-child(4n) {
+                    background-color: rgb(211, 122, 7);
+                }
+    
+                &__slide:nth-child(5n) {
+                    background-color: rgb(118, 163, 12);
+                }
+    
+                &__slide:nth-child(6n) {
+                    background-color: rgb(180, 10, 47);
+                }
+    
+                &__slide:nth-child(7n) {
+                    background-color: rgb(35, 99, 19);
+                }
+    
+                &__slide:nth-child(8n) {
+                    background-color: rgb(0, 68, 255);
+                }
+    
+                &__slide:nth-child(9n) {
+                    background-color: rgb(218, 12, 218);
+                }
+    
+                &__slide:nth-child(10n) {
+                    background-color: rgb(54, 94, 77);
+                }
+            }
+            &_left{
+                
+                h2{
+                    font-size: 4em;
+                    border-top: 10px solid $yellow;
+                    border-bottom: 10px solid $yellow;
+                }
+            }
+        }
+    }
+}

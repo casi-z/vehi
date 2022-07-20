@@ -1,0 +1,78 @@
+@import "null-style.scss";//!Обнуляющий стиль
+
+//!___________________________________________|Цветовая палитра|____________________________________________________________
+
+$black:rgb(0, 0, 0);
+$white:rgb(255, 255, 255);
+$yellow:rgba(255, 222, 89, 1);
+$beige:rgb(255, 242, 229);
+$red:#ea1c26;
+$yellow-grad: linear-gradient(to right, $white, $yellow);;
+
+//!______________________________________________________________________________________________________________________
+
+
+*{
+    font-family: 'Arial';
+}
+h3{
+    color: $black; 
+    display: inline;
+}
+h4{
+    color: $white;
+    display: inline;
+}
+h5{
+    -webkit-text-stroke: 2px #000000;
+    color: transparent;
+    display: inline;
+}
+html{
+    body{
+        background: url(../img/bg.jpg) fixed center/cover;
+        @import "header.scss";
+        .wrapper{
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            max-width: 1200px;
+            //background: rgba($color: #000000, $alpha: 0.2);
+            @import "content.scss";
+        
+        }
+        
+        
+        
+    }
+}
+//!____________________________________________|Медиа запросы|____________________________________________________________
+@media (max-width:1200px) {
+    .wrapper{
+        max-width: 970px;
+    }
+}
+@media (max-width:992px) {
+    .wrapper{
+        max-width: 750px;
+    }
+}
+@media (max-width:767px) {
+    .wrapper{
+        max-width: none;
+    }
+    
+    .content{
+        flex-direction: column;
+        margin-top: 10vh;
+        &__bar{
+            min-width: 90vw;
+            .swiper{
+                max-width: 66.6vw;
+                // max-height: 66.6vw;
+            }
+        }
+    }
+}
+
+//!______________________________________________________________________________________________________________________
